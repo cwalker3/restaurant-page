@@ -4,7 +4,8 @@
   "description": "This project is part of [The Odin Project](https://theodinproject.com)'s curriculum. The project page can be found [here](https://www.theodinproject.com/lessons/javascript-restaurant-page).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,15 @@
   },
   "homepage": "https://github.com/cwalker3/restaurant-page#readme",
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "sass": "^1.63.4",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
     "webpack": "^5.87.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "sanitize.css": "^13.0.0"
   }
 }
