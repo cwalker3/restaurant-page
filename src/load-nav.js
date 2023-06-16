@@ -1,3 +1,5 @@
+import { loadContent } from './load-content.js';
+
 export function loadNav() {
   const nav = createNav();
 
@@ -32,14 +34,19 @@ function createButtons() {
   const contactButton = document.createElement('button');
 
   homeButton.textContent = 'Home';
-  homeButton.onclick = '';
-  homeButton.classList.add('active');
+  homeButton.onclick = loadContent;
+  homeButton.classList.add('home-button');
+  homeButton.dataset.button = 'home';
 
   menuButton.textContent = 'Menu';
-  menuButton.onclick = '';
+  menuButton.onclick = loadContent;
+  menuButton.classList.add('menu-button');
+  menuButton.dataset.button = 'menu';
 
   contactButton.textContent = 'Contact';
-  contactButton.onclick = '';
+  contactButton.onclick = loadContent;
+  contactButton.classList.add('contact-button');
+  contactButton.dataset.button = 'contact';
 
   return [homeButton, menuButton, contactButton];
 }
